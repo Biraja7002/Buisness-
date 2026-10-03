@@ -17,14 +17,11 @@
     --black2:#080607;
     --burgundy:#210b10;
     --burgundy2:#3a1119;
-
     --gold:#d7b36a;
     --gold2:#f0d99b;
-
     --cream:#eee4d0;
     --text:#c1b8aa;
     --muted:#766e64;
-
     --line:rgba(215,179,106,.20);
 }
 
@@ -40,18 +37,8 @@ html{
 
 body{
     background:
-        radial-gradient(
-            circle at 50% -10%,
-            rgba(94,24,39,.35),
-            transparent 35%
-        ),
-        linear-gradient(
-            180deg,
-            #030303,
-            #080607 45%,
-            #030303
-        );
-
+        radial-gradient(circle at 50% -10%,rgba(94,24,39,.35),transparent 35%),
+        linear-gradient(180deg,#030303,#080607 45%,#030303);
     color:var(--text);
     font-family:"DM Sans",sans-serif;
     overflow-x:hidden;
@@ -67,7 +54,6 @@ body::before{
     inset:0;
     pointer-events:none;
     z-index:9999;
-
     opacity:.035;
 
     background-image:url(
@@ -82,28 +68,19 @@ body::before{
 #stars{
     position:fixed;
     inset:0;
-
     pointer-events:none;
     overflow:hidden;
-
     z-index:1;
 }
 
 .star{
     position:absolute;
-
-    width:2px;
-    height:2px;
-
     border-radius:50%;
-
     background:#f4dfac;
 
     box-shadow:
         0 0 5px rgba(240,217,155,.8),
         0 0 12px rgba(215,179,106,.35);
-
-    opacity:.45;
 
     animation:
         floatStar linear infinite,
@@ -113,21 +90,11 @@ body::before{
 @keyframes floatStar{
 
     from{
-        transform:
-            translate3d(
-                0,
-                110vh,
-                0
-            );
+        transform:translate3d(0,110vh,0);
     }
 
     to{
-        transform:
-            translate3d(
-                var(--drift),
-                -15vh,
-                0
-            );
+        transform:translate3d(var(--drift),-15vh,0);
     }
 }
 
@@ -145,23 +112,18 @@ body::before{
 }
 
 /* =========================================
-   MUSIC BAR
+   MUSIC
 ========================================= */
 
 .music-bar{
-
     position:relative;
-
     z-index:20;
-
     width:100%;
-
     padding:14px 20px;
 
     background:rgba(3,3,3,.94);
 
-    border-bottom:
-        1px solid var(--line);
+    border-bottom:1px solid var(--line);
 
     backdrop-filter:blur(18px);
 
@@ -169,25 +131,15 @@ body::before{
 }
 
 .music-label{
-
     font-size:10px;
-
     letter-spacing:4px;
-
     color:var(--muted);
-
     margin-bottom:7px;
 }
 
 audio{
-
     width:min(500px,92%);
-
     height:34px;
-
-    filter:
-        sepia(.2)
-        saturate(.7);
 }
 
 /* =========================================
@@ -195,67 +147,44 @@ audio{
 ========================================= */
 
 section{
-
     position:relative;
-
     z-index:2;
-
     padding:110px 7%;
 }
 
 .container{
-
     max-width:1150px;
-
     margin:auto;
 }
 
 .eyebrow{
-
     font-size:10px;
-
     letter-spacing:5px;
-
     color:var(--gold);
-
     text-transform:uppercase;
-
     margin-bottom:18px;
 }
 
-h1,
-h2,
-h3{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
-
+h1,h2,h3{
+    font-family:"Cormorant Garamond",serif;
     color:var(--cream);
-
     font-weight:500;
 }
 
 h2{
-
-    font-size:
-        clamp(45px,7vw,82px);
-
+    font-size:clamp(45px,7vw,82px);
     line-height:.92;
 }
 
 p{
-
     line-height:1.8;
 }
 
 .gold{
-
     color:var(--gold2);
 }
 
 .center{
-
     text-align:center;
 }
 
@@ -264,47 +193,33 @@ p{
 ========================================= */
 
 .btn{
-
     display:inline-flex;
-
     align-items:center;
-
     justify-content:center;
 
     min-height:50px;
+    padding:0 27px;
 
-    padding:
-        0 27px;
-
-    border:
-        1px solid
-        rgba(215,179,106,.6);
+    border:1px solid rgba(215,179,106,.6);
 
     color:var(--gold2);
-
     text-decoration:none;
 
     font-size:11px;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
 
     transition:.35s ease;
 
-    background:
-        rgba(215,179,106,.03);
+    background:rgba(215,179,106,.03);
 }
 
 .btn:hover{
-
     background:var(--gold);
-
     color:#080604;
 
     box-shadow:
-        0 0 35px
-        rgba(215,179,106,.18);
+        0 0 35px rgba(215,179,106,.18);
 
     transform:translateY(-2px);
 }
@@ -314,13 +229,10 @@ p{
 ========================================= */
 
 .hero{
-
     min-height:92vh;
 
     display:flex;
-
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
@@ -329,7 +241,6 @@ p{
 }
 
 .hero::before{
-
     content:"";
 
     position:absolute;
@@ -350,46 +261,31 @@ p{
 }
 
 .hero-content{
-
     position:relative;
-
     max-width:950px;
 }
 
 .brand{
-
     font-size:12px;
-
     letter-spacing:8px;
-
     color:var(--gold);
-
     margin-bottom:32px;
 }
 
 .hero h1{
-
-    font-size:
-        clamp(58px,10vw,130px);
-
+    font-size:clamp(58px,10vw,130px);
     line-height:.78;
-
     margin-bottom:35px;
 }
 
 .hero h1 span{
-
     display:block;
-
     color:var(--gold2);
 }
 
 .hero-text{
-
     max-width:650px;
-
-    margin:
-        0 auto 40px;
+    margin:0 auto 40px;
 
     color:#a79d90;
 
@@ -397,29 +293,20 @@ p{
 }
 
 .hero-buttons{
-
     display:flex;
-
     gap:14px;
-
     justify-content:center;
-
     flex-wrap:wrap;
 }
 
 .scroll{
-
     position:absolute;
-
     bottom:25px;
-
     left:50%;
 
-    transform:
-        translateX(-50%);
+    transform:translateX(-50%);
 
     font-size:9px;
-
     letter-spacing:4px;
 
     color:#625b52;
@@ -430,7 +317,6 @@ p{
 ========================================= */
 
 .experience{
-
     background:
         linear-gradient(
             180deg,
@@ -441,17 +327,13 @@ p{
 }
 
 .demo-box{
-
     max-width:900px;
 
-    margin:
-        55px auto 0;
+    margin:55px auto 0;
 
-    border:
-        1px solid var(--line);
+    border:1px solid var(--line);
 
-    background:
-        rgba(10,8,8,.75);
+    background:rgba(10,8,8,.75);
 
     padding:55px;
 
@@ -461,7 +343,6 @@ p{
 }
 
 .demo-box::after{
-
     content:"";
 
     position:absolute;
@@ -481,33 +362,23 @@ p{
 }
 
 .demo-top{
-
     display:flex;
-
     justify-content:space-between;
 
-    border-bottom:
-        1px solid var(--line);
+    border-bottom:1px solid var(--line);
 
     padding-bottom:18px;
-
     margin-bottom:40px;
 }
 
 .demo-top span{
-
     font-size:9px;
-
     letter-spacing:3px;
-
     color:var(--muted);
 }
 
 .demo-title{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    font-family:"Cormorant Garamond",serif;
 
     font-size:58px;
 
@@ -519,7 +390,6 @@ p{
 }
 
 .demo-message{
-
     max-width:550px;
 
     color:#aaa093;
@@ -528,9 +398,7 @@ p{
 }
 
 .countdown{
-
     display:flex;
-
     gap:30px;
 
     flex-wrap:wrap;
@@ -539,17 +407,13 @@ p{
 }
 
 .time{
-
     text-align:center;
 }
 
 .time strong{
-
     display:block;
 
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    font-family:"Cormorant Garamond",serif;
 
     font-size:42px;
 
@@ -557,7 +421,6 @@ p{
 }
 
 .time small{
-
     font-size:8px;
 
     letter-spacing:3px;
@@ -566,27 +429,22 @@ p{
 }
 
 /* =========================================
-   ATTENTION SECTION
+   ATTENTION
 ========================================= */
 
 .problem{
-
     text-align:center;
 }
 
 .problem h2{
-
     max-width:900px;
-
     margin:auto;
 }
 
 .problem p{
-
     max-width:650px;
 
-    margin:
-        30px auto;
+    margin:30px auto;
 
     color:#9d9386;
 }
@@ -596,14 +454,11 @@ p{
 ========================================= */
 
 .offer{
-
     padding-top:130px;
-
     padding-bottom:130px;
 }
 
 .offer-box{
-
     position:relative;
 
     max-width:1050px;
@@ -626,31 +481,20 @@ p{
             #090606
         );
 
-    border:
-        1px solid
-        rgba(215,179,106,.3);
+    border:1px solid rgba(215,179,106,.3);
 
     box-shadow:
-        0 0 80px
-        rgba(45,10,18,.35),
-
-        inset 0 0 80px
-        rgba(215,179,106,.025);
+        0 0 80px rgba(45,10,18,.35),
+        inset 0 0 80px rgba(215,179,106,.025);
 }
 
 .offer-box h2{
-
-    font-size:
-        clamp(48px,7vw,85px);
-
+    font-size:clamp(48px,7vw,85px);
     margin-bottom:25px;
 }
 
 .price{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    font-family:"Cormorant Garamond",serif;
 
     font-size:80px;
 
@@ -662,10 +506,7 @@ p{
 }
 
 .price small{
-
-    font-family:
-        "DM Sans",
-        sans-serif;
+    font-family:"DM Sans",sans-serif;
 
     font-size:12px;
 
@@ -675,11 +516,9 @@ p{
 }
 
 .offer-description{
-
     max-width:650px;
 
-    margin:
-        0 auto 35px;
+    margin:0 auto 35px;
 
     color:#aaa093;
 }
@@ -689,11 +528,9 @@ p{
 ========================================= */
 
 .types-grid{
-
     display:grid;
 
-    grid-template-columns:
-        repeat(5,1fr);
+    grid-template-columns:repeat(5,1fr);
 
     gap:12px;
 
@@ -701,47 +538,36 @@ p{
 }
 
 .type{
-
     min-height:150px;
 
-    border:
-        1px solid var(--line);
+    border:1px solid var(--line);
 
     display:flex;
 
     flex-direction:column;
 
     align-items:center;
-
     justify-content:center;
 
     text-align:center;
 
     padding:20px;
 
-    background:
-        rgba(255,255,255,.012);
+    background:rgba(255,255,255,.012);
 
     transition:.4s ease;
 }
 
 .type:hover{
+    border-color:rgba(215,179,106,.6);
 
-    border-color:
-        rgba(215,179,106,.6);
+    transform:translateY(-5px);
 
-    transform:
-        translateY(-5px);
-
-    background:
-        rgba(215,179,106,.025);
+    background:rgba(215,179,106,.025);
 }
 
 .type-number{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    font-family:"Cormorant Garamond",serif;
 
     color:var(--gold);
 
@@ -751,7 +577,6 @@ p{
 }
 
 .type-name{
-
     font-size:10px;
 
     letter-spacing:3px;
@@ -766,7 +591,6 @@ p{
 ========================================= */
 
 .features{
-
     background:
         linear-gradient(
             180deg,
@@ -777,11 +601,9 @@ p{
 }
 
 .features-grid{
-
     display:grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+    grid-template-columns:repeat(4,1fr);
 
     gap:15px;
 
@@ -789,34 +611,26 @@ p{
 }
 
 .feature{
-
     min-height:190px;
 
     padding:28px;
 
-    border:
-        1px solid var(--line);
+    border:1px solid var(--line);
 
-    background:
-        rgba(5,5,5,.5);
+    background:rgba(5,5,5,.5);
 
     transition:.4s;
 }
 
 .feature:hover{
-
-    transform:
-        translateY(-6px);
+    transform:translateY(-6px);
 
     border-color:
         rgba(215,179,106,.55);
 }
 
 .feature-number{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    font-family:"Cormorant Garamond",serif;
 
     color:var(--gold);
 
@@ -826,14 +640,12 @@ p{
 }
 
 .feature h3{
-
     font-size:25px;
 
     margin-bottom:10px;
 }
 
 .feature p{
-
     font-size:12px;
 
     color:#81786d;
@@ -846,33 +658,25 @@ p{
 ========================================= */
 
 .steps{
-
     max-width:900px;
 
-    margin:
-        60px auto 0;
+    margin:60px auto 0;
 }
 
 .step{
-
     display:grid;
 
-    grid-template-columns:
-        80px 1fr;
+    grid-template-columns:80px 1fr;
 
     gap:25px;
 
     padding:30px 0;
 
-    border-bottom:
-        1px solid var(--line);
+    border-bottom:1px solid var(--line);
 }
 
 .step-no{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    font-family:"Cormorant Garamond",serif;
 
     font-size:48px;
 
@@ -880,14 +684,12 @@ p{
 }
 
 .step h3{
-
     font-size:30px;
 
     margin-bottom:5px;
 }
 
 .step p{
-
     font-size:13px;
 
     color:#81786d;
@@ -898,31 +700,23 @@ p{
 ========================================= */
 
 .memory{
-
     text-align:center;
 }
 
 .memory-card{
-
     max-width:800px;
 
-    margin:
-        55px auto 0;
+    margin:55px auto 0;
 
-    padding:
-        70px 35px;
+    padding:70px 35px;
 
-    border-top:
-        1px solid var(--line);
+    border-top:1px solid var(--line);
 
-    border-bottom:
-        1px solid var(--line);
+    border-bottom:1px solid var(--line);
 }
 
 .memory-card h3{
-
-    font-size:
-        clamp(38px,6vw,68px);
+    font-size:clamp(38px,6vw,68px);
 
     line-height:1;
 
@@ -930,7 +724,6 @@ p{
 }
 
 .memory-card p{
-
     color:#93897c;
 
     max-width:570px;
@@ -943,29 +736,24 @@ p{
 ========================================= */
 
 .contact{
-
     text-align:center;
 
     padding-bottom:80px;
 }
 
 .contact h2{
-
     margin-bottom:25px;
 }
 
 .contact-text{
-
     max-width:600px;
 
-    margin:
-        0 auto 35px;
+    margin:0 auto 35px;
 
     color:#978d80;
 }
 
 .contact-note{
-
     margin-top:25px;
 
     font-size:10px;
@@ -980,7 +768,6 @@ p{
 ========================================= */
 
 footer{
-
     position:relative;
 
     z-index:2;
@@ -995,10 +782,7 @@ footer{
 }
 
 footer strong{
-
-    font-family:
-        "Cormorant Garamond",
-        serif;
+    font-family:"Cormorant Garamond",serif;
 
     color:var(--gold2);
 
@@ -1006,7 +790,6 @@ footer strong{
 }
 
 footer p{
-
     margin-top:6px;
 
     font-size:9px;
@@ -1023,11 +806,9 @@ footer p{
 ========================================= */
 
 .reveal{
-
     opacity:0;
 
-    transform:
-        translateY(35px);
+    transform:translateY(35px);
 
     transition:
         1s
@@ -1035,11 +816,9 @@ footer p{
 }
 
 .reveal.visible{
-
     opacity:1;
 
-    transform:
-        translateY(0);
+    transform:translateY(0);
 }
 
 /* =========================================
@@ -1049,84 +828,65 @@ footer p{
 @media(max-width:900px){
 
     .types-grid{
-
         grid-template-columns:
             repeat(2,1fr);
     }
 
     .features-grid{
-
         grid-template-columns:
             repeat(2,1fr);
     }
 
     .offer-box{
-
-        padding:
-            60px 25px;
+        padding:60px 25px;
     }
 }
 
 @media(max-width:600px){
 
     section{
-
-        padding:
-            80px 6%;
+        padding:80px 6%;
     }
 
     .hero{
-
         min-height:85vh;
     }
 
     .hero h1{
-
         font-size:64px;
     }
 
     .brand{
-
         font-size:9px;
-
         letter-spacing:5px;
     }
 
     .demo-box{
-
-        padding:
-            30px 22px;
+        padding:30px 22px;
     }
 
     .demo-title{
-
         font-size:46px;
     }
 
     .countdown{
-
         gap:20px;
     }
 
     .time strong{
-
         font-size:34px;
     }
 
     .types-grid{
-
         grid-template-columns:
             1fr 1fr;
     }
 
     .features-grid{
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns:1fr;
     }
 
     .step{
-
         grid-template-columns:
             55px 1fr;
 
@@ -1134,37 +894,29 @@ footer p{
     }
 
     .step-no{
-
         font-size:38px;
     }
 
     .price{
-
         font-size:65px;
     }
 
     .offer-box{
-
-        padding:
-            55px 20px;
+        padding:55px 20px;
     }
 }
 
 @media(max-width:400px){
 
     .types-grid{
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns:1fr;
     }
 
     .hero h1{
-
         font-size:55px;
     }
 
     .demo-title{
-
         font-size:40px;
     }
 }
@@ -1250,7 +1002,7 @@ footer p{
                 href="#order"
                 class="btn"
             >
-                Get Yours — ₹150
+                Get Yours — ₹77
             </a>
 
         </div>
@@ -1313,7 +1065,6 @@ footer p{
 
                 Someone
                 <br>
-
                 Special.
 
             </div>
@@ -1462,7 +1213,7 @@ footer p{
 
         <div class="price">
 
-            ₹150
+            ₹77
 
             <small>
                 / WEBSITE
@@ -1988,7 +1739,7 @@ footer p{
             class="btn"
             target="_blank"
         >
-            Contact Liskun — ₹150
+            Contact Liskun — ₹77
         </a>
 
 
@@ -2014,7 +1765,7 @@ footer p{
     </strong>
 
     <p>
-        Custom Birthday Websites · ₹150
+        Custom Birthday Websites · ₹77
     </p>
 
 </footer>
@@ -2169,7 +1920,6 @@ function updateCountdown(){
 
 updateCountdown();
 
-
 setInterval(
     updateCountdown,
     1000
@@ -2187,9 +1937,7 @@ const observer =
 
             entries.forEach(entry => {
 
-                if(
-                    entry.isIntersecting
-                ){
+                if(entry.isIntersecting){
 
                     entry.target
                         .classList
